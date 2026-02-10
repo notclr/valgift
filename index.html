@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="valgift.css">
+    <title>❤️</title>
+</head>
+<body>
+    <!-- ENVELOPE: no modal, just envelope on pink background -->
+    <div id="envelopeStage">
+        <div class="envelope" id="envelope">
+            <div class="envelope-heart" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" clip-rule="evenodd" /></svg>
+            </div>
+            <div class="envelope-flap">
+                <svg class="envelope-flap-outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <line x1="0" y1="0" x2="50" y2="50" stroke="#d4c4a8" stroke-width="3" vector-effect="non-scaling-stroke" />
+                    <line x1="50" y1="50" x2="100" y2="0" stroke="#d4c4a8" stroke-width="3" vector-effect="non-scaling-stroke" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="modal-inner">
+            <!-- VIEW: Puzzle (playing + completed state in same view) -->
+            <div id="puzzleView" class="modal-view">
+                <h1 class="modal-title">Dear Laiza...</h1>
+                <div class="puzzle-container" id="puzzleContainer">
+                    <div class="puzzle-grid-wrap" id="puzzleGridWrap">
+                        <div class="puzzle-grid" id="puzzleGrid"></div>
+                        <div class="puzzle-full-image-overlay" id="puzzleFullImageOverlay">
+                            <img src="images/full-image.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="puzzle-reveal-text" id="puzzleRevealText">
+                    <p class="complete-line">...you complete me.</p>
+                    <p class="valentine-question">Will you be my Valentine?</p>
+                    <button type="button" class="yes-only-btn" id="yesBtn">Yes</button>
+                </div>
+            </div>
+
+            <!-- VIEW: Success -->
+            <div id="successView" class="modal-view">
+                <p class="modal-title">Yay, I can't wait!</p>
+                <div class="success-gif-wrap">
+                    <img src="giphy.gif" alt="" />
+                </div>
+                <button type="button" class="reset-btn" id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="valgift.js"></script>
+</body>
+</html>
